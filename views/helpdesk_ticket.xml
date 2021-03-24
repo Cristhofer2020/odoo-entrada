@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="helpdesk_ticket_form_inherit" model="ir.ui.view">
+            <field name="name">account.analytic.line.form.custom</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="helpdesk.ticket.form.inherit.timesheet"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="start_time"/>
+                </xpath>
+                <xpath expr="//field[@name='start_time']" position="before">
+                    <fields name="end_time"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

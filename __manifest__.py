@@ -1,15 +1,14 @@
 {
-    'name' : '$ModuleName',
-    'version' : 'Version',
+    'name' : 'odoo-entrada',
+    'version' : '1.0',
     'summary' : 'Summery',
     'description' : 'Description',
     'category' : 'Category',
-    'author' : 'Author',
+    'author' : 'cristhofer',
     'website' : 'Website',
     'license' : 'License',
-    'depends' : ['Depends'],
-    'data' : ['Data'],
-    'demo' : ['Demo'],
+    'depends' : ['helpdesk', 'timesheet_grid'],
+    'data' : ['views/helpdesk_ticket.xml'],
     'installable' : True,
-'auto_install': False
+    'auto_install': False
 }
