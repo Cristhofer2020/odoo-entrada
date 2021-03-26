@@ -1,11 +1,11 @@
 from odoo import api, fields, models
 
 
-class AccountAnalyticLine(models.Model):
-    _inherit = ["account.analytic.line"]
+class HelpdeskTickets(models.Model):
+    _inherit = ["helpdesk.ticket"]
 
     start_time = fields.Float(
-        string='End_time',
+        string='start_time',
         required=False)
     end_time = fields.Float(
         string='End_time',
