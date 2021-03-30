@@ -5,12 +5,12 @@
             <field name="name">helpdesk.ticket.form.inherit.timesheet</field>
             <field name="model">helpdesk.ticket</field>
             <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
-            <field name="priority" eval="8"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='name']" position="before">
+                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='name']" position="after">
                     <field name="start_time"/>
                 </xpath>
-                <xpath expr="//field[@name='start_time']" position="before">
+
+                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='start_time']" position="before">
                     <fields name="end_time"/>
                 </xpath>
             </field>
