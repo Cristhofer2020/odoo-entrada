@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="helpdesk_ticket_form_inherit_custom" model="ir.ui.view">
-            <field name="name">helpdesk.ticket.form.inherit.timesheet</field>
+        <record id="helpdesk_ticket_form_custom" model="ir.ui.view">
+            <field name="name">helpdesk.ticket.form.timesheet</field>
             <field name="model">helpdesk.ticket</field>
             <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='name']" position="after">
-                    <field name="start_time"/>
+                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='employee_id']" position="after">
+                    <field name="end_time"/>
                 </xpath>
-
-                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='start_time']" position="before">
-                    <fields name="end_time"/>
+                <xpath expr="//field[@name='timesheet_ids']/tree/field[@name='employee_id']" position="after">
+                    <field name="start_time"/>
                 </xpath>
             </field>
         </record>
