@@ -5,10 +5,10 @@ class AccountAnalyticLine(models.Model):
     _inherit = ["account.analytic.line"]
 
     start_time = fields.Float(
-        string='start_time',
+        string='Start time',
         required=False)
     end_time = fields.Float(
-        string='End_time',
+        string='End time',
         required=False)
     unit_amount = fields.Float(compute='_calculate_duration')
 
