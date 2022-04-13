@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Entrada y Salida",
+    'name': "CAPW (Calculo de horas)",
 
     'summary': """
         Module for generating hours""",
@@ -13,15 +13,15 @@
     'website': "http://www.capw.com.do",
 
     'category': 'Timesheet',
-    'version': '1.0',
+    'version': '13.0',
 
 
-    'depends': ['base_setup', 'board', 'helpdesk', 'account', 'timesheet_grid', 'helpdesk_timesheet'],
+    'depends': ['base_setup', 'helpdesk', 'timesheet_grid', 'helpdesk_timesheet'],
 
     'data': [
         'views/helpdesk_ticket.xml'
     ],
     'installable': True,
-    'application': False,
+    'application': True,
     'auto_install': False,
 }

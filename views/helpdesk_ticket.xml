@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <record id="helpdesk_ticket_form_custom" model="ir.ui.view">
-            <field name="name">helpdesk.ticket.form.timesheet</field>
+            <field name="name">helpdesk.ticket.form.helpdesk</field>
             <field name="model">helpdesk.ticket</field>
             <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
             <field name="arch" type="xml">
